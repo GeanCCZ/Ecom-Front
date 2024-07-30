@@ -1,0 +1,19 @@
+.full_width{
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.flex-spaced_between {
+    display: flex;
+    justify-items: space-between;
+    gap:var(space-between)
+}
+
+.title {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
