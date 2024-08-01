@@ -1,7 +1,16 @@
 <div class="flex-spaced_between flex-dynamic_element_dispersion">
     
-    <section class="title left-menu full_width "><app-navigation-menu />1</section>
-    <section class="title center-search_bar full_width">|</section>
+    <section class="title left-menu  "><app-navigation-menu />1</section>
+
+    <section class="title center-search_bar full_width">
+        <div *ngIf="enableSearchBar===false; else searchBar">
+            <img class="tiny-icon" src={{searchIcon.getImage().getUrl()}} (mouseenter)="showSearchBar()">
+        </div>
+        <ng-template #searchBar >
+            <div (mouseleave)="showSearchBar()">a</div>
+        </ng-template>
+    </section>
+
     <section class="title right-user_menu"><app-user-menu /></section>
         
 </div>
