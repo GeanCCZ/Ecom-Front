@@ -23,8 +23,16 @@ export class HeaderComponent implements OnInit{
   searchIcon = new Icon('Search_Icon',new Image('search-icon.svg','Search Icon'))
 
   enableSearchBar = false;
-  searchInput = ''
+  searchInput = 'q'
   
+  fillSearchInputField(event: Event) {
+    console.log((event.target as HTMLInputElement)?.value)
+    
+    if((event.target as HTMLInputElement)?.value == ''){ return}
+    
+    this.searchInput = (event.target as HTMLInputElement)?.value
+  }
+
   showSearchBar(){console.log(this.searchInput)
     if(this.searchInput == '') this.enableSearchBar = !this.enableSearchBar;
   }

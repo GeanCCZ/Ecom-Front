@@ -2,13 +2,32 @@
     width: 70vh;
     height: 5vh;
     border-style:hidden;
-    border-radius: 25px;
-    opacity: 70%;
+    border-radius: 10px;
+    opacity: 60%;
     background-color: #f1f1f1;
 }
 
 .section-search{
-    background-color: #939393;
+
     height: 5vh;
     padding: 5px 1px 5px 1px;
+    display: flex;
+
+    max-height: fit-content;
+}
+
+.div-search{
+    display: inline-flex;
+    border-radius: 10px;
+    height: 5.3vh;
+    padding: 0px 1px 0px 1px;
+    background-color: #d9d8d8;
+
+    max-height: fit-content;
+    max-width: 95%;
+}
+
+.search-icon{
+
+    margin: 5px;
 }

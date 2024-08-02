@@ -8,12 +8,13 @@
         </div>
         <ng-template #searchBar >
             <div (mouseleave)="showSearchBar()" type>
-                <section class="section-search">a
-                    <form (ngSubmit)="showSearchBar()" formGroup]="ticketSearchForm" #formDir="ngForm">
+                <section class="section-search flex-spaced_between">
 
-                        <input class="input-search_bar" type="text" pInputText formControlName="searchInput" > 
-                        <button type="submit" label="Pesquisar"></button>
-                    </form>
+                    <div class="div-search">
+                        <input class="input-search_bar" type="text" pInputText (input)="fillSearchInputField($event)" >
+                        <img class="tiny-icon search-icon" src={{searchIcon.getImage().getUrl()}} (mouseenter)="showSearchBar()">
+                    </div>
+
                 </section>
             </div>
         </ng-template>
