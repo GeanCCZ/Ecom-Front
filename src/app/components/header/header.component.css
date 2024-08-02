@@ -1,0 +1,14 @@
+.input-search_bar{
+    width: 70vh;
+    height: 5vh;
+    border-style:hidden;
+    border-radius: 25px;
+    opacity: 70%;
+    background-color: #f1f1f1;
+}
+
+.section-search{
+    background-color: #939393;
+    height: 5vh;
+    padding: 5px 1px 5px 1px;
+}

@@ -3,11 +3,19 @@
     <section class="title left-menu  "><app-navigation-menu />1</section>
 
     <section class="title center-search_bar full_width">
-        <div *ngIf="enableSearchBar===false; else searchBar">
+        <div *ngIf="enableSearchBar===true; else searchBar">
             <img class="tiny-icon" src={{searchIcon.getImage().getUrl()}} (mouseenter)="showSearchBar()">
         </div>
         <ng-template #searchBar >
-            <div (mouseleave)="showSearchBar()">a</div>
+            <div (mouseleave)="showSearchBar()" type>
+                <section class="section-search">a
+                    <form (ngSubmit)="showSearchBar()" formGroup]="ticketSearchForm" #formDir="ngForm">
+
+                        <input class="input-search_bar" type="text" pInputText formControlName="searchInput" > 
+                        <button type="submit" label="Pesquisar"></button>
+                    </form>
+                </section>
+            </div>
         </ng-template>
     </section>
 

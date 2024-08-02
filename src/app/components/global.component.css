@@ -1,17 +1,14 @@
 .full_width{
   width: 100%;
-  background-color: antiquewhite;
 }
 
 .flex-spaced_between {
   display: flex;
   justify-items: space-between;
-  background-color: blue;
 }
 
 .flex-dynamic_element_dispersion{
   flex: 1 1 auto;
-  background-color: aqua;
 }
 
 .title {
