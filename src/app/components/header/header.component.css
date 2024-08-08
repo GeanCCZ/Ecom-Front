@@ -2,7 +2,7 @@
     width: 70vh;
     height: 5vh;
     border-style:hidden;
-    border-radius: 10px;
+    border-radius: 25px;
     opacity: 60%;
     background-color: #f1f1f1;
 }
@@ -18,16 +18,27 @@
 
 .div-search{
     display: inline-flex;
-    border-radius: 10px;
+    border-radius: 25px;
     height: 5.3vh;
     padding: 0px 1px 0px 1px;
     background-color: #d9d8d8;
 
     max-height: fit-content;
     max-width: 95%;
+
+    transition: all 3s ease;
+
+    .input-search_bar{
+        display: flex;
+        background-color: aqua;
+    }
 }
 
 .search-icon{
-
     margin: 5px;
+}
+
+.search-icon:hover{
+    cursor: pointer;
+    transition: max-height 5s ease-in-out;
 }
