@@ -4,10 +4,7 @@ import { UserMenuComponent } from "./user-menu/user-menu.component";
 import Icon from '../../domain/entities/icon.entity';
 import Image from '../../domain/entities/image.entity';
 import { CommonModule } from '@angular/common';
-import {
-  FormsModule,
-} from '@angular/forms';
-import { ICollapseScreenWidth } from '../../domain/interfaces/ICollapseScreenWidth';
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -17,8 +14,6 @@ import { ICollapseScreenWidth } from '../../domain/interfaces/ICollapseScreenWid
 })
 export class HeaderComponent implements OnInit{
 
-  screenWidth = 0;
-
   searchIcon = new Icon('Search_Icon',new Image('search-icon.svg','Search Icon'))
 
   @Output() enableSearchBar = false;
@@ -27,18 +22,17 @@ export class HeaderComponent implements OnInit{
   fillSearchInputField(event: Event) {
     console.log((event.target as HTMLInputElement)?.value)
     
-    if((event.target as HTMLInputElement)?.value == ''){ return}
+    //if((event.target as HTMLInputElement)?.value == ''){ return}
     
     this.searchInput = (event.target as HTMLInputElement)?.value
   }
 
-  showSearchBar(data: ICollapseScreenWidth) {
-    this.screenWidth = data.screenWidth;
+  showSearchBar() {
+    console.log(this.searchInput, this.enableSearchBar)
     if (this.searchInput == '' || this.enableSearchBar === false) {
+      console.log('qa')
       this.enableSearchBar = !this.enableSearchBar
     };
-
-
 
   }
 

@@ -1,26 +1,20 @@
 <div class="flex-spaced_between flex-dynamic_element_dispersion">
-    
+
     <section class="title left-menu  "><app-navigation-menu /></section>
 
     <section class="title center-search_bar full_width">
-        <div *ngIf="enableSearchBar===false; else searchBar">
-            <img class="tiny-icon search-icon" src={{searchIcon.getImage().getUrl()}} (enableSearchBar)="showSearchBar($event)">
+        <div *ngIf="enableSearchBar===false; else searchBar" (mouseenter)="showSearchBar()">
+            <img class="tiny-icon search-icon" src={{searchIcon.getImage().getUrl()}}>
         </div>
-        <ng-template #searchBar >
-            <div>
-                <section class="section-search flex-spaced_between">
-
-                    <div class="div-search">
-                        <input class="input-search_bar" type="text" pInputText (input)="fillSearchInputField($event)" >
-                        <img class="tiny-icon search-icon" src={{searchIcon.getImage().getUrl()}}  (enableSearchBar)="showSearchBar($event)">
-                    </div>
-
-                </section>
+        <ng-template #searchBar>
+            <div class="div-search" (mouseleave)="showSearchBar()">
+                <input class="input-search_bar" type="text" pInputText (input)="fillSearchInputField($event)">
+                <img class="tiny-icon search-icon" src={{searchIcon.getImage().getUrl()}}>
             </div>
+
         </ng-template>
     </section>
 
     <section class="title right-user_menu"><app-user-menu /></section>
-        
-</div>
 
+</div>
