@@ -1,0 +1,19 @@
+.navigation-icon {
+    margin: 2vh 0 0 1.5vh;
+
+}
+
+.div-sidebar{
+    width: 0vh;
+    height: 93.5vh;
+    
+}
+
+.div-sidebar.show{
+    background-color: aqua;
+    width: 10vh;
+    height: 93.5vh;
+
+    transition: all 0.35s;
+}
+
