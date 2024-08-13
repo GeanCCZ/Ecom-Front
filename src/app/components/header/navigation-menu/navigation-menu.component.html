@@ -1,6 +1,8 @@
 <div>
     <div>
-        <img class="medium-icon navigation-icon" src={{navigationMenuIcon.getImage().getUrl()}} (click)="showSideBar()">
+        <button class="navigation-menu-icon"  (click)="showSideBar()">
+            <img class="medium-icon" src={{navigationMenuIcon.getImage().getUrl()}}>    
+        </button>
     </div>
     <div class="div-sidebar" *ngIf="enableSideBar === true" [ngClass]="{'show': enableSideBar}">
         1
