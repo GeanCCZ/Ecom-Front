@@ -20,17 +20,13 @@ export class HeaderComponent implements OnInit{
   @Input() searchInput: string = '';
   
   fillSearchInputField(event: Event) {
-    console.log((event.target as HTMLInputElement)?.value)
-    
-    //if((event.target as HTMLInputElement)?.value == ''){ return}
+    if((event.target as HTMLInputElement)?.value == ''){ return}
     
     this.searchInput = (event.target as HTMLInputElement)?.value
   }
 
   showSearchBar() {
-    console.log(this.searchInput, this.enableSearchBar)
     if (this.searchInput == '' || this.enableSearchBar === false) {
-      console.log('qa')
       this.enableSearchBar = !this.enableSearchBar
     };
 
