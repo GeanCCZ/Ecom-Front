@@ -1,23 +1,53 @@
-.navigation-menu-icon{
+.section-navigation-menu{
 
-    margin: 1.6vh 0 0 1.5vh;
+    width: 7vh;
 
+    display: flex;
+
+}
+
+.div-navigation-menu{
+
+    width: 10vh;
+    height: 100%;
+
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+
+}
+
+.section-navigation-menu.show{
+
+    border-style: groove;
+
+    border-width: 0 1px 0 0;
+
+    width: fit-content + 10px;
+    transform: translateX(0);
+
+
+}
+
+.section-navigation-menu.show, .div-navigation-menu.show{
+
+    width: fit-content;
+    transform: translateX(0);
+
+}
+
+.navigation-menu-icon {
+
+    margin: 2vh 0 0 11.5vh;
     width: fit-content;
 
 }
 
-.div-sidebar{
+.div-sidebar {
 
-    width: 0vh;
-    height: 93.5vh;
-    
-}
-
- .navigation-menu-icon{
-    background-color: rgb(2, 252, 81);
     width: 10vh;
-    height: 93.5vh;
+    height: 100vh;
+    
+    justify-self: center;
 
-    transition: all 0.35s;
 }
 

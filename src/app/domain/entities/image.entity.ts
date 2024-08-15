@@ -1,28 +1,28 @@
 
 export default class Image{
 
-    url: string
+    private url: string
     
-    alt: string
+    private alt: string
 
     constructor(url:string,alt:string) {
         this.url = url
         this.alt = alt
     }
 
-    setUrl(url: string) :void{
+    public setUrl(url: string) :void{
         this.url = url;
     }
 
-    getUrl():string {
+    public getUrl():string {
         return this.url;
     }
 
-    setAlt(alt: string):void {
+    public setAlt(alt: string):void {
         this.alt = alt;
     }
 
-    getAlt(): string{
+    public getAlt(): string{
         return this.alt;
     }
 

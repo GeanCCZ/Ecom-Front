@@ -20,7 +20,7 @@ export default class RedirectIcon extends Icon{
         this.router = inject(Router);
     }
 
-    navigate() {
+    public navigate() {
         if(this.redirect == true){
         this.router.navigate([this.redirect_route])
         } else {
@@ -28,19 +28,19 @@ export default class RedirectIcon extends Icon{
         }
     }
 
-    setRedirect(redirect: boolean):void {
+    public setRedirect(redirect: boolean):void {
         this.redirect = redirect;
     }
 
-    getRedirect():boolean {
+    public getRedirect():boolean {
         return this.redirect;
     }
 
-    setRedirectRoute(redirect_route: string):void {
+    public setRedirectRoute(redirect_route: string):void {
         this.redirect_route = redirect_route;
     }
 
-    getRedirectRoute():string {
+    public getRedirectRoute():string {
         return this.redirect_route;
     }
 

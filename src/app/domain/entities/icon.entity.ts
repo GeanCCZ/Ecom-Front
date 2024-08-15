@@ -2,28 +2,28 @@ import Image from "./image.entity";
 
 export default class Icon{
 
-    label: string;
+    private label: string;
 
-    image: Image;
+    private image: Image;
 
     constructor(label: string, image: Image) {
         this.label = label;
         this.image = image;
     }
 
-    setLabel(label: string):void {
+    public setLabel(label: string):void {
         this.label = label;
     }
 
-    getLabel():string {
+    public getLabel():string {
         return this.label;
     }
 
-    setImage(image: Image) :void{
+    public setImage(image: Image) :void{
         this.image = image;
     }
 
-    getImage(): Image{
+    public getImage(): Image{
         return this.image;
     }
 

@@ -1,10 +1,11 @@
-<div>
-    <div>
-        <button class="navigation-menu-icon"  (click)="showSideBar()">
-            <img class="medium-icon" src={{navigationMenuIcon.getImage().getUrl()}}>    
-        </button>
+<section class="section-navigation-menu" [ngClass]="{'show': enableSideBar}">
+    <div class="div-navigation-menu" [ngClass]="{'show': enableSideBar}">
+        <img class="medium-icon navigation-menu-icon" src={{navigationMenuIcon.getImage().getUrl()}} (click)="showSideBar()">    
+    
+        <div class="div-sidebar">
+            <div *ngFor="let icon of sideBarIcons" class="div-sidebar_icon" >
+                {{icon.label}}
+            </div>
+        </div>
     </div>
-    <div class="div-sidebar" *ngIf="enableSideBar === true" [ngClass]="{'show': enableSideBar}">
-        1
-    </div>
-</div>
+</section>
